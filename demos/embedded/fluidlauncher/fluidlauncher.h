@@ -45,6 +45,7 @@
 #include <QtGui>
 #include <QTimer>
 #include <QStringRef>
+#include <QStackedWidget>
 
 #include "pictureflow.h"
 #include "slideshow.h"

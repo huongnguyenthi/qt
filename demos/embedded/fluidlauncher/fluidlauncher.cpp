@@ -40,6 +40,8 @@
 ****************************************************************************/
 
 #include <QXmlStreamReader>
+#include <QApplication>
+#include <QDesktopWidget>
 
 #include "fluidlauncher.h"
 
@@ -80,8 +82,10 @@ FluidLauncher::FluidLauncher(QStringList* args)
     if ( (configIndex != -1) && (configIndex != args->count()-1) )
         success = loadConfig(args->at(configIndex+1));
     else
-        success = loadConfig("config.xml");
-
+    {
+	QString path = QCoreApplication::instance()->applicationDirPath() + "/config.xml";
+        success = loadConfig(path);
+    }
     if (success) {
       populatePictureFlow();
 

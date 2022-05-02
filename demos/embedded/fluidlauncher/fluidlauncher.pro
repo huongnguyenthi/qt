@@ -1,8 +1,9 @@
 TEMPLATE = app
-TARGET =
+TARGET = fluidlauncherapp
 DEPENDPATH += .
 INCLUDEPATH += .
 VERSION = $$QT_VERSION
+QT += core widgets
 
 # Input
 HEADERS += \
